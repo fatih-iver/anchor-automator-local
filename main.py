@@ -1,0 +1,1 @@
+print('Anchor-Automator-Local')
