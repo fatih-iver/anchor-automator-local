@@ -19,9 +19,9 @@ fiver6/anchor-automator-local
 
 ```bash
 docker run \
--e ANCHOR_EMAIL='fatih.iver@gmail.com' \
--e ANCHOR_PASSWORD='v9M/tXWT4j)FN!#y' \
--e VIDEO_URL='https://www.youtube.com/watch?v=Y66j_BUCBMY' \
+-e ANCHOR_EMAIL="fatih.iver@gmail.com" \
+-e ANCHOR_PASSWORD="v9M/tXWT4j)FN!#y" \
+-e VIDEO_URL="https://www.youtube.com/watch?v=Y66j_BUCBMY" \
 fiver6/anchor-automator-local
 ```
 
