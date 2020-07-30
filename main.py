@@ -203,4 +203,6 @@ try:
 
 finally:
     print('[selenium] quit browser')
+    print(browser.get_log('driver'))
+    print(browser.get_log('browser'))
     browser.quit()
