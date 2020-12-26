@@ -13,8 +13,13 @@ RUN dpkg -i google-chrome-v84.0.4147.105-1_amd64.deb; apt-get update -y; apt-get
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
-# Copy application file
-COPY main.py main.py
+# Copy application files
+WORKDIR /app
+COPY . .
 
-# Start execution
-ENTRYPOINT ["python", "main.py"]
+# Make print()'s to be seen in logs for detached modes
+ENV PYTHONUNBUFFERED 1
+
+# Start server
+CMD exec gunicorn --bind 0.0.0.0:8080 --workers 1 --timeout 0 app:app
+
